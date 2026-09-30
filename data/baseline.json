@@ -1,0 +1,142 @@
+{
+  "agent_response_starts_immediately": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2218.8705829903483,
+        "p95": 2862.742885539774
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2313.949582981877,
+        "p95": 2859.993208316155
+      }
+    }
+  },
+  "approaching_eot": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2314.9534999392927,
+        "p95": 3517.5890517421067
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2277.027166914195,
+        "p95": 2650.1284685218707
+      }
+    }
+  },
+  "cooldown_repeated_ack": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2294.6614370448515,
+        "p95": 2516.8913019588217
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2225.4607914946973,
+        "p95": 2383.66805203259
+      }
+    }
+  },
+  "fast_speaker": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2206.603750004433,
+        "p95": 2498.533687845338
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2292.6996251335368,
+        "p95": 2582.7554794959724
+      }
+    }
+  },
+  "long_monologue": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2362.2979790670797,
+        "p95": 2482.672364509199
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2373.4904795419425,
+        "p95": 2775.9030933957547
+      }
+    }
+  },
+  "long_speech_multiple_opportunities": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2380.506563000381,
+        "p95": 2478.177676908672
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2382.81149987597,
+        "p95": 2564.7866356302984
+      }
+    }
+  },
+  "mid_sentence_pause": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2307.7460629865527,
+        "p95": 2758.7046981207095
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2182.135145412758,
+        "p95": 2439.2711668624543
+      }
+    }
+  },
+  "noisy_audio": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2193.4202085249126,
+        "p95": 2338.9935413142666
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2285.111687495373,
+        "p95": 2499.598542111926
+      }
+    }
+  },
+  "short_answer": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2221.9609789317474,
+        "p95": 2694.057166809216
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2180.4076249245554,
+        "p95": 2789.1652083490044
+      }
+    }
+  },
+  "user_stops_as_backchannel_about_to_play": {
+    "backchannel": {
+      "response_latency_ms": {
+        "p50": 2364.537041517906,
+        "p95": 2821.064208226744
+      }
+    },
+    "baseline": {
+      "response_latency_ms": {
+        "p50": 2351.470979512669,
+        "p95": 2613.7325420277193
+      }
+    }
+  }
+}

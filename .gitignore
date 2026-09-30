@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.next/
+*.env.local
+.env
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.pytest_cache/
+logs/
+
+# benchmark.sqlite and cached_clips/*.wav are intentionally NOT ignored —
+# they're checked in as the actual submitted results / audio assets so a
+# reviewer can open the dashboard and hear the demo without AWS access.
+*.pdf
