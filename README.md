@@ -72,13 +72,38 @@ What held in both runs: **zero bad backchannels, zero milliseconds of overlap**,
 
 **Regression detection** (`benchmarks/regression_check.py`): flags a run only if a change clears both a 75ms *and* a 12% threshold — needed because P95 alone swings 400ms between identical runs (see Results). Verified against both a clean rerun and an injected 400ms regression.
 
+## Credentials (first time only)
+
+You only need these for the live demo or re-running the benchmark yourself. Browsing the dashboard and running the tests need nothing below, `data/benchmark.sqlite` already has real results committed.
+
+**LiveKit** (free):
+1. Sign up at [cloud.livekit.io](https://cloud.livekit.io), create a project.
+2. From the project settings, copy the URL, API key, and API secret.
+3. Put all three into both `apps/agent/.env` and `apps/web/.env.local`:
+   ```
+   LIVEKIT_URL=wss://your-project.livekit.cloud
+   LIVEKIT_API_KEY=...
+   LIVEKIT_API_SECRET=...
+   ```
+
+**AWS** (Bedrock, Polly, Transcribe):
+1. In an AWS account you control, go to the Bedrock console (region `us-east-1`) and request model access for **Amazon Nova Micro**, this is a one-time, usually-instant approval per account.
+2. Create an IAM user (or role) with permission to call Bedrock (`InvokeModel`/`Converse`), Polly (`SynthesizeSpeech`), and Transcribe streaming. Generate an access key + secret for it.
+3. Export them before running anything:
+   ```bash
+   export AWS_ACCESS_KEY_ID=...
+   export AWS_SECRET_ACCESS_KEY=...
+   export AWS_DEFAULT_REGION=us-east-1
+   ```
+   The code checks for these first and uses them directly, no profile setup needed. (It also knows how to fall back to a named AWS CLI profile called `wavy`, that's specific to how this was originally built and can be ignored.)
+
 ## Run it
 
 ```bash
 # setup
 cd apps/agent && python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
 cd ../web && npm install
-# add LIVEKIT_URL / API_KEY / API_SECRET to apps/agent/.env and apps/web/.env.local
+# credentials: see above
 
 # tests
 cd apps/agent && python -m pytest tests/ -v
